@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react';
-import type { GameState } from '../types/game';
+import {useEffect, useState} from 'react';
+import type {GameState} from '../types/game';
 
 const STORAGE_KEY = 'chatgame_state';
 
 const initialState: GameState = {
-  currentQuestionId: 'start',
-  history: [],
-  isFinished: false,
-  finalEpilogueId: null,
+    currentQuestionId: 'start',
+    history: [],
+    isFinished: false,
+    finalEpilogueId: null,
 };
 
 export function useGameState() {
-  const [state, setState] = useState<GameState>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : initialState;
-  });
+    const [state, setState] = useState<GameState>(() => {
+        const saved = sessionStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : initialState;
+    });
 
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [state]);
+    useEffect(() => {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }, [state]);
 
-  const updateState = (newState: Partial<GameState>) => {
-    setState(prev => ({ ...prev, ...newState }));
-  };
+    const updateState = (newState: Partial<GameState>) => {
+        setState(prev => ({...prev, ...newState}));
+    };
 
-  const resetGame = () => {
-    setState(initialState);
-  };
+    const resetGame = () => {
+        setState(initialState);
+    };
 
-  return { state, updateState, resetGame };
+    return {state, updateState, resetGame};
 }
