@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-Baum-Berechnung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        #ergebnisse {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Quiz-Baum-Berechnung</h1>
+<p>Berechnen Sie die Gesamtzahl der Fragen, die Anzahl der finalen Fragen und die Anzahl der finalen Antworten in einem Quiz mit baumartiger Struktur.</p>
+
+<label>
+    Anzahl der Fragen pro Pfad (n):
+    <input type="number" id="n" value="5" min="1">
+</label>
+
+<label>
+    Anzahl der möglichen Antworten pro Frage (r):
+    <input type="number" id="r" value="4" min="2">
+</label>
+
+<button onclick="berechne()">Berechnen</button>
+
+<div id="ergebnisse"></div>
+
+<script>
+    // Funktion zur Berechnung der Gesamtzahl der Fragen in einem Quiz-Baum
+    // n: Anzahl der Fragen pro Pfad (Ebenen)
+    // r: Anzahl der möglichen Antworten pro Frage
+    function berechneGesamtzahlFragen(n, r) {
+        if (r <= 1 || n < 1) {
+            throw new Error("Ungültige Eingaben: r muss größer als 1 sein, n muss positiv sein.");
+        }
+        // Formel für die Summe der geometrischen Reihe: (r^n - 1) / (r - 1)
+        return (Math.pow(r, n) - 1) / (r - 1);
+    }
+
+    // Funktion zur Berechnung der Anzahl der finalen Fragen (auf der n-ten Ebene)
+    function berechneFinaleFragen(n, r) {
+        // Formel: r^(n-1)
+        return Math.pow(r, n - 1);
+    }
+
+    // Funktion zur Berechnung der Anzahl der finalen Antworten (Endpunkte)
+    function berechneFinaleAntworten(n, r) {
+        // Formel: r^n
+        return Math.pow(r, n);
+    }
+
+    // Funktion, die bei Button-Klick aufgerufen wird
+    function berechne() {
+        const n = parseInt(document.getElementById('n').value);
+        const r = parseInt(document.getElementById('r').value);
+        let ergebnisseDiv = document.getElementById('ergebnisse');
+
+        try {
+            let gesamtzahlFragen = berechneGesamtzahlFragen(n, r);
+            let finaleFragen = berechneFinaleFragen(n, r);
+            let finaleAntworten = berechneFinaleAntworten(n, r);
+
+            ergebnisseDiv.innerHTML = `
+                    <p><strong>Gesamtzahl der Fragen:</strong> ${gesamtzahlFragen}</p>
+                    <p><strong>Anzahl der finalen Fragen (n-te Fragen):</strong> ${finaleFragen}</p>
+                    <p><strong>Anzahl der finalen Antworten:</strong> ${finaleAntworten}</p>
+                `;
+        } catch (error) {
+            ergebnisseDiv.innerHTML = `<p style="color: red;">Fehler: ${error.message}</p>`;
+        }
+    }
+</script>
+</body>
+</html>
