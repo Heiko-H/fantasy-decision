@@ -62,13 +62,13 @@ const Header: React.FC<HeaderProps> = ({onNavigate, activePage}) => {
                             onClick={() => handleNavigation('game')}
                             className={`text-left px-4 py-3 rounded-md transition-colors ${activePage === 'game' ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
                         >
-                            Fantasy Game
+                            Fantasy Abenteuer
                         </button>
                         <button
                             onClick={() => handleNavigation('dnd')}
                             className={`text-left px-4 py-3 rounded-md transition-colors ${activePage === 'dnd' ? 'bg-yellow-500/10 text-yellow-500' : 'text-gray-300 hover:bg-white/5 hover:text-white'}`}
                         >
-                            D&D Race
+                            D&D Rasse und Klasse
                         </button>
                     </nav>
                 </div>

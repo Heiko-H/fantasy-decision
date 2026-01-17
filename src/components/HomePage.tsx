@@ -23,7 +23,7 @@ const HomePage: React.FC<HomePageProps> = ({onStartGame, onStartDnd}) => {
                     <div
                         className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity"/>
                     <h3 className="text-2xl font-serif font-bold text-yellow-500 mb-4 uppercase tracking-wider">Fantasy
-                        Game</h3>
+                        Abenteuer</h3>
                     <p className="text-gray-400">Triff schwierige Entscheidungen in einem epischen Text-Abenteuer.</p>
                 </button>
 
@@ -34,8 +34,8 @@ const HomePage: React.FC<HomePageProps> = ({onStartGame, onStartDnd}) => {
                     <div
                         className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity"/>
                     <h3 className="text-2xl font-serif font-bold text-yellow-500 mb-4 uppercase tracking-wider">D&D
-                        Race</h3>
-                    <p className="text-gray-400">Entscheide, welche D&D Rasse am besten zu deinem Spielstil passt.</p>
+                        Rasse und Klasse</h3>
+                    <p className="text-gray-400">Entscheide, welches D&D Volk am besten zu deinem Spielstil passt.</p>
                 </button>
             </div>
         </div>
