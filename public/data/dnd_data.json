@@ -1,0 +1,280 @@
+{
+  "races": [
+    {
+      "name": "Dwarf",
+      "attributes": [
+        "Industrious",
+        "Resilient",
+        "Stouthearted"
+      ]
+    },
+    {
+      "name": "Elf",
+      "attributes": [
+        "Ethereal",
+        "Agile",
+        "Perceptive"
+      ]
+    },
+    {
+      "name": "Halfling",
+      "attributes": [
+        "Nimble",
+        "Optimistic",
+        "Unobtrusive"
+      ]
+    },
+    {
+      "name": "Human",
+      "attributes": [
+        "Ambitious",
+        "Versatile",
+        "Adaptable"
+      ]
+    },
+    {
+      "name": "Dragonborn",
+      "attributes": [
+        "Proud",
+        "Draconic",
+        "Formidable"
+      ]
+    },
+    {
+      "name": "Gnome",
+      "attributes": [
+        "Inquisitive",
+        "Inventive",
+        "Whimsical"
+      ]
+    },
+    {
+      "name": "Half-Elf",
+      "attributes": [
+        "Diplomatic",
+        "Wandering",
+        "Charismatic"
+      ]
+    },
+    {
+      "name": "Half-Orc",
+      "attributes": [
+        "Menacing",
+        "Tenacious",
+        "Brutish"
+      ]
+    },
+    {
+      "name": "Tiefling",
+      "attributes": [
+        "Infernal",
+        "Mysterious",
+        "Ominous"
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "name": "Barbarian",
+      "attributes": [
+        "Primal",
+        "Fierce",
+        "Unstoppable"
+      ]
+    },
+    {
+      "name": "Bard",
+      "attributes": [
+        "Eloquent",
+        "Inspiring",
+        "Artistic"
+      ]
+    },
+    {
+      "name": "Cleric",
+      "attributes": [
+        "Devout",
+        "Healing",
+        "Sacred"
+      ]
+    },
+    {
+      "name": "Druid",
+      "attributes": [
+        "Naturalistic",
+        "Shapeshifting",
+        "Wild"
+      ]
+    },
+    {
+      "name": "Fighter",
+      "attributes": [
+        "Disciplined",
+        "Martial",
+        "Tactical"
+      ]
+    },
+    {
+      "name": "Monk",
+      "attributes": [
+        "Serene",
+        "Ascetic",
+        "Disciplined_Mind"
+      ]
+    },
+    {
+      "name": "Paladin",
+      "attributes": [
+        "Chivalrous",
+        "Righteous",
+        "Protective"
+      ]
+    },
+    {
+      "name": "Ranger",
+      "attributes": [
+        "Tracking",
+        "Survivalist",
+        "Vigilant"
+      ]
+    },
+    {
+      "name": "Rogue",
+      "attributes": [
+        "Cunning",
+        "Stealthy",
+        "Deft"
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "attributes": [
+        "Innate",
+        "Arcane",
+        "Spontaneous"
+      ]
+    },
+    {
+      "name": "Warlock",
+      "attributes": [
+        "Eldritch",
+        "Pact-bound",
+        "Occult"
+      ]
+    },
+    {
+      "name": "Wizard",
+      "attributes": [
+        "Scholarly",
+        "Studious",
+        "Methodical"
+      ]
+    }
+  ],
+  "backgrounds": [
+    {
+      "name": "Acolyte",
+      "attributes": [
+        "Pious",
+        "Theological",
+        "Reverent"
+      ]
+    },
+    {
+      "name": "Charlatan",
+      "attributes": [
+        "Deceptive",
+        "Sly",
+        "Manipulative"
+      ]
+    },
+    {
+      "name": "Criminal",
+      "attributes": [
+        "Lawless",
+        "Shady",
+        "Infamous"
+      ]
+    },
+    {
+      "name": "Entertainer",
+      "attributes": [
+        "Captivating",
+        "Performative",
+        "Flamboyant"
+      ]
+    },
+    {
+      "name": "Folk Hero",
+      "attributes": [
+        "Rustic",
+        "Courageous",
+        "Renowned"
+      ]
+    },
+    {
+      "name": "Guild Artisan",
+      "attributes": [
+        "Crafty",
+        "Mercantile",
+        "Skilled"
+      ]
+    },
+    {
+      "name": "Hermit",
+      "attributes": [
+        "Reclusive",
+        "Meditative",
+        "Solitary"
+      ]
+    },
+    {
+      "name": "Noble",
+      "attributes": [
+        "Aristocratic",
+        "Privileged",
+        "Influential"
+      ]
+    },
+    {
+      "name": "Outlander",
+      "attributes": [
+        "Hardy",
+        "Nomadic",
+        "Rugged"
+      ]
+    },
+    {
+      "name": "Sage",
+      "attributes": [
+        "Erudite",
+        "Philosophical",
+        "Intellectual"
+      ]
+    },
+    {
+      "name": "Sailor",
+      "attributes": [
+        "Nautical",
+        "Weathered",
+        "Seafaring"
+      ]
+    },
+    {
+      "name": "Soldier",
+      "attributes": [
+        "Regimented",
+        "Battle-hardened",
+        "Valiant"
+      ]
+    },
+    {
+      "name": "Urchin",
+      "attributes": [
+        "Scrappy",
+        "Streetwise",
+        "Destitute"
+      ]
+    }
+  ]
+}
