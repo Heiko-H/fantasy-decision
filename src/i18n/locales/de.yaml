@@ -1,0 +1,39 @@
+header:
+  home: "Startseite"
+  adventure: "Fantasy Abenteuer"
+  dnd: "D&D"
+  logo_alt: "Logo"
+
+home:
+  title: "Willkommen bei Fantasy Decision"
+  subtitle: "Wähle, was du entscheiden möchtest."
+  adventure_title: "Fantasy Abenteuer"
+  adventure_desc: "Triff schwierige Entscheidungen in einem epischen text-basierten Abenteuer."
+  dnd_title: "D&D"
+  dnd_desc: "Entscheide, welcher D&D-Charkter am besten zu deinem Spielstil passt."
+
+adventure:
+  loading: "Abenteuer wird geladen..."
+  error: "Fehler beim Laden des Abenteuers: {{error}}"
+  error_title: "Ein Fehler ist aufgetreten oder das Abenteuer ist zu Ende."
+  restart: "Neustart"
+
+end_screen:
+  title: "Das Ende deiner Reise"
+  restart: "Ein neues Abenteuer beginnen"
+
+dnd_page:
+  title: "D&D"
+  intro: "Entscheide, welches Volk, Klasse und Hintergrund am besten zu dir passt."
+  start_quiz: "Quiz starten"
+  loading: "Lade D&D-Daten..."
+  error: "Fehler: {{error}}"
+  question_of: "Frage {{current}} von {{total}}"
+  progress: "Fortschritt"
+  calculating: "Berechne Ergebnisse..."
+  destiny_revealed: "Charakter-Schicksal enthüllt"
+  result_title: "Du solltest den folgenden Charakter spielen"
+  race: "Volk"
+  class: "Klasse"
+  background: "Hintergrund"
+  restart: "Quiz erneut machen"
