@@ -1,279 +1,279 @@
 {
   "races": [
     {
-      "name": "Dwarf",
-      "attributes": [
-        "Industrious",
-        "Resilient",
-        "Stouthearted"
+      "id": "race_dwarf",
+      "attributeIds": [
+        "attr_industrious",
+        "attr_resilient",
+        "attr_stouthearted"
       ]
     },
     {
-      "name": "Elf",
-      "attributes": [
-        "Ethereal",
-        "Agile",
-        "Perceptive"
+      "id": "race_elf",
+      "attributeIds": [
+        "attr_ethereal",
+        "attr_agile",
+        "attr_perceptive"
       ]
     },
     {
-      "name": "Halfling",
-      "attributes": [
-        "Nimble",
-        "Optimistic",
-        "Unobtrusive"
+      "id": "race_halfling",
+      "attributeIds": [
+        "attr_nimble",
+        "attr_optimistic",
+        "attr_unobtrusive"
       ]
     },
     {
-      "name": "Human",
-      "attributes": [
-        "Ambitious",
-        "Versatile",
-        "Adaptable"
+      "id": "race_human",
+      "attributeIds": [
+        "attr_ambitious",
+        "attr_versatile",
+        "attr_adaptable"
       ]
     },
     {
-      "name": "Dragonborn",
-      "attributes": [
-        "Proud",
-        "Draconic",
-        "Formidable"
+      "id": "race_dragonborn",
+      "attributeIds": [
+        "attr_proud",
+        "attr_draconic",
+        "attr_formidable"
       ]
     },
     {
-      "name": "Gnome",
-      "attributes": [
-        "Inquisitive",
-        "Inventive",
-        "Whimsical"
+      "id": "race_gnome",
+      "attributeIds": [
+        "attr_inquisitive",
+        "attr_inventive",
+        "attr_whimsical"
       ]
     },
     {
-      "name": "Half-Elf",
-      "attributes": [
-        "Diplomatic",
-        "Wandering",
-        "Charismatic"
+      "id": "race_half_elf",
+      "attributeIds": [
+        "attr_diplomatic",
+        "attr_wandering",
+        "attr_charismatic"
       ]
     },
     {
-      "name": "Half-Orc",
-      "attributes": [
-        "Menacing",
-        "Tenacious",
-        "Brutish"
+      "id": "race_half_orc",
+      "attributeIds": [
+        "attr_menacing",
+        "attr_tenacious",
+        "attr_brutish"
       ]
     },
     {
-      "name": "Tiefling",
-      "attributes": [
-        "Infernal",
-        "Mysterious",
-        "Ominous"
+      "id": "race_tiefling",
+      "attributeIds": [
+        "attr_infernal",
+        "attr_mysterious",
+        "attr_ominous"
       ]
     }
   ],
   "classes": [
     {
-      "name": "Barbarian",
-      "attributes": [
-        "Primal",
-        "Fierce",
-        "Unstoppable"
+      "id": "class_barbarian",
+      "attributeIds": [
+        "attr_primal",
+        "attr_fierce",
+        "attr_unstoppable"
       ]
     },
     {
-      "name": "Bard",
-      "attributes": [
-        "Eloquent",
-        "Inspiring",
-        "Artistic"
+      "id": "class_bard",
+      "attributeIds": [
+        "attr_eloquent",
+        "attr_inspiring",
+        "attr_artistic"
       ]
     },
     {
-      "name": "Cleric",
-      "attributes": [
-        "Devout",
-        "Healing",
-        "Sacred"
+      "id": "class_cleric",
+      "attributeIds": [
+        "attr_devout",
+        "attr_healing",
+        "attr_sacred"
       ]
     },
     {
-      "name": "Druid",
-      "attributes": [
-        "Naturalistic",
-        "Shapeshifting",
-        "Wild"
+      "id": "class_druid",
+      "attributeIds": [
+        "attr_naturalistic",
+        "attr_shapeshifting",
+        "attr_wild"
       ]
     },
     {
-      "name": "Fighter",
-      "attributes": [
-        "Disciplined",
-        "Martial",
-        "Tactical"
+      "id": "class_fighter",
+      "attributeIds": [
+        "attr_disciplined",
+        "attr_martial",
+        "attr_tactical"
       ]
     },
     {
-      "name": "Monk",
-      "attributes": [
-        "Serene",
-        "Ascetic",
-        "Disciplined_Mind"
+      "id": "class_monk",
+      "attributeIds": [
+        "attr_serene",
+        "attr_ascetic",
+        "attr_disciplined_mind"
       ]
     },
     {
-      "name": "Paladin",
-      "attributes": [
-        "Chivalrous",
-        "Righteous",
-        "Protective"
+      "id": "class_paladin",
+      "attributeIds": [
+        "attr_chivalrous",
+        "attr_righteous",
+        "attr_protective"
       ]
     },
     {
-      "name": "Ranger",
-      "attributes": [
-        "Tracking",
-        "Survivalist",
-        "Vigilant"
+      "id": "class_ranger",
+      "attributeIds": [
+        "attr_tracking",
+        "attr_survivalist",
+        "attr_vigilant"
       ]
     },
     {
-      "name": "Rogue",
-      "attributes": [
-        "Cunning",
-        "Stealthy",
-        "Deft"
+      "id": "class_rogue",
+      "attributeIds": [
+        "attr_cunning",
+        "attr_stealthy",
+        "attr_deft"
       ]
     },
     {
-      "name": "Sorcerer",
-      "attributes": [
-        "Innate",
-        "Arcane",
-        "Spontaneous"
+      "id": "class_sorcerer",
+      "attributeIds": [
+        "attr_innate",
+        "attr_arcane",
+        "attr_spontaneous"
       ]
     },
     {
-      "name": "Warlock",
-      "attributes": [
-        "Eldritch",
-        "Pact-bound",
-        "Occult"
+      "id": "class_warlock",
+      "attributeIds": [
+        "attr_eldritch",
+        "attr_pact_bound",
+        "attr_occult"
       ]
     },
     {
-      "name": "Wizard",
-      "attributes": [
-        "Scholarly",
-        "Studious",
-        "Methodical"
+      "id": "class_wizard",
+      "attributeIds": [
+        "attr_scholarly",
+        "attr_studious",
+        "attr_methodical"
       ]
     }
   ],
   "backgrounds": [
     {
-      "name": "Acolyte",
-      "attributes": [
-        "Pious",
-        "Theological",
-        "Reverent"
+      "id": "bg_acolyte",
+      "attributeIds": [
+        "attr_pious",
+        "attr_theological",
+        "attr_reverent"
       ]
     },
     {
-      "name": "Charlatan",
-      "attributes": [
-        "Deceptive",
-        "Sly",
-        "Manipulative"
+      "id": "bg_charlatan",
+      "attributeIds": [
+        "attr_deceptive",
+        "attr_sly",
+        "attr_manipulative"
       ]
     },
     {
-      "name": "Criminal",
-      "attributes": [
-        "Lawless",
-        "Shady",
-        "Infamous"
+      "id": "bg_criminal",
+      "attributeIds": [
+        "attr_lawless",
+        "attr_shady",
+        "attr_infamous"
       ]
     },
     {
-      "name": "Entertainer",
-      "attributes": [
-        "Captivating",
-        "Performative",
-        "Flamboyant"
+      "id": "bg_entertainer",
+      "attributeIds": [
+        "attr_captivating",
+        "attr_performative",
+        "attr_flamboyant"
       ]
     },
     {
-      "name": "Folk Hero",
-      "attributes": [
-        "Rustic",
-        "Courageous",
-        "Renowned"
+      "id": "bg_folk_hero",
+      "attributeIds": [
+        "attr_rustic",
+        "attr_courageous",
+        "attr_renowned"
       ]
     },
     {
-      "name": "Guild Artisan",
-      "attributes": [
-        "Crafty",
-        "Mercantile",
-        "Skilled"
+      "id": "bg_guild_artisan",
+      "attributeIds": [
+        "attr_crafty",
+        "attr_mercantile",
+        "attr_skilled"
       ]
     },
     {
-      "name": "Hermit",
-      "attributes": [
-        "Reclusive",
-        "Meditative",
-        "Solitary"
+      "id": "bg_hermit",
+      "attributeIds": [
+        "attr_reclusive",
+        "attr_meditative",
+        "attr_solitary"
       ]
     },
     {
-      "name": "Noble",
-      "attributes": [
-        "Aristocratic",
-        "Privileged",
-        "Influential"
+      "id": "bg_noble",
+      "attributeIds": [
+        "attr_aristocratic",
+        "attr_privileged",
+        "attr_influential"
       ]
     },
     {
-      "name": "Outlander",
-      "attributes": [
-        "Hardy",
-        "Nomadic",
-        "Rugged"
+      "id": "bg_outlander",
+      "attributeIds": [
+        "attr_hardy",
+        "attr_nomadic",
+        "attr_rugged"
       ]
     },
     {
-      "name": "Sage",
-      "attributes": [
-        "Erudite",
-        "Philosophical",
-        "Intellectual"
+      "id": "bg_sage",
+      "attributeIds": [
+        "attr_erudite",
+        "attr_philosophical",
+        "attr_intellectual"
       ]
     },
     {
-      "name": "Sailor",
-      "attributes": [
-        "Nautical",
-        "Weathered",
-        "Seafaring"
+      "id": "bg_sailor",
+      "attributeIds": [
+        "attr_nautical",
+        "attr_weathered",
+        "attr_seafaring"
       ]
     },
     {
-      "name": "Soldier",
-      "attributes": [
-        "Regimented",
-        "Battle-hardened",
-        "Valiant"
+      "id": "bg_soldier",
+      "attributeIds": [
+        "attr_regimented",
+        "attr_battle_hardened",
+        "attr_valiant"
       ]
     },
     {
-      "name": "Urchin",
-      "attributes": [
-        "Scrappy",
-        "Streetwise",
-        "Destitute"
+      "id": "bg_urchin",
+      "attributeIds": [
+        "attr_scrappy",
+        "attr_streetwise",
+        "attr_destitute"
       ]
     }
   ]
