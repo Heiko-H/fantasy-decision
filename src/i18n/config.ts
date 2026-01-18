@@ -7,10 +7,10 @@ import yaml from 'js-yaml';
 
 const resources = {
     de: {
-        translation: yaml.load(deYaml)
+        translation: yaml.load(deYaml) as Record<string, string>
     },
     en: {
-        translation: yaml.load(enYaml)
+        translation: yaml.load(enYaml) as Record<string, string>
     }
 };
 
