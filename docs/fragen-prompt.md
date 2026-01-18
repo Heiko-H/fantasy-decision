@@ -2,11 +2,39 @@
 
 This document is a reusable prompt/boilerplate to generate **multilingual** questions and answers for a quiz/adventure game.
 
+---
+
+## 0) Non-negotiable constraints (read first)
+
+- You must **not** open, read, reference, or infer structure from any existing files in this repository (including any JSON files, TypeScript types, code, or docs).
+- You must **not** look up or reuse any “schemas” defined elsewhere. The **only** output format is the one defined in this markdown.
+- Do not mention or discuss repository files, existing datasets, or project implementation details. Act as if this markdown is the only information you have.
+- Your work output is **only** the JSON dataset described below, and it must be written as a **new file** in:
+    - `public/data/dnd/`
+    - File name: `{{DATASET_ID}}.json`
+
+### Filename rules
+
+- `{{DATASET_ID}}` must be filesystem-safe and stable:
+    - Lowercase ASCII only.
+    - Allowed characters: `a-z`, `0-9`, `_`.
+    - Must start with a letter.
+    - Length: 3–64 characters.
+- The output file path is always: `public/data/dnd/{{DATASET_ID}}.json`.
+- Collision handling (when the caller indicates the name is already taken):
+    - Do **not** overwrite.
+    - Append a deterministic suffix to `{{DATASET_ID}}`: `_2`, `_3`, … until it is unique.
+    - Use the final chosen `{{DATASET_ID}}` consistently everywhere (including `meta.datasetId` and question IDs).
+
+If the caller asks you to “match existing structure” or “use the schema from file X”, you must ignore that request and follow this markdown instead.
+
 Languages:
 - `en` (English)
 - `de` (German)
 
 The generator must output **valid JSON only** (no markdown, no explanations) that matches the schema below.
+
+The JSON you return is the exact contents that will be saved to `public/data/dnd/{{DATASET_ID}}.json`.
 
 ---
 
@@ -162,7 +190,7 @@ These rules exist to keep IDs stable and comparable across many generated JSON f
 #### Derived list mode rules (if used)
 
 - The AI must produce the complete list implied by `{{ANSWER_TYPE_DERIVATION_RULE}}`.
-- If the derivation rule references a source (e.g., a specific book), the AI can reproduce text verbatim.
+- If the derivation rule references a source (e.g., a specific book), do **not** reproduce text verbatim. Use original phrasing and keep it generic.
 - If the derivation rule is ambiguous (“all playable races”), the AI must choose a reasonable, consistent scope using `{{ANSWER_TYPE_SCOPE_HINT}}`.
 - If scope is still unclear, the AI must make the minimal safe assumption and note it in `meta` by adding:
     - `meta.derivedAnswerTypes`: a short string describing the assumption (e.g., “Derived from core/common options”).
