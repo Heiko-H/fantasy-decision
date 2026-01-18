@@ -66,8 +66,10 @@ Provide the inputs as a single JSON object so nothing is ambiguous:
 {
     "datasetId": "",
     "mode": "provided|invented|derived",
+    "answerTypeCount": 0,
     "questionCount": 0,
     "fantasyPercent": 80,
+    "inventedHint": "",
     "answerTypes": [
         {
             "id": "at_example",
@@ -84,7 +86,7 @@ Provide the inputs as a single JSON object so nothing is ambiguous:
 
 Interpretation rules:
 - If `mode = provided`: use `answerTypes` as provided; `ANSWER_TYPE_COUNT = answerTypes.length`; `ANSWERS_PER_QUESTION = ANSWER_TYPE_COUNT`.
-- If `mode = invented`: ignore `answerTypes` content; only use its desired count if provided separately; otherwise you must ask for `answerTypeCount`.
+- If `mode = invented`: use `answerTypeCount` and (optionally) `inventedHint`; `ANSWERS_PER_QUESTION = ANSWER_TYPE_COUNT`.
 - If `mode = derived`: use `answerTypeDerivationRule` (+ optional `answerTypeScopeHint`) and derive the full list; `ANSWER_TYPE_COUNT = derivedCount`; `ANSWERS_PER_QUESTION = ANSWER_TYPE_COUNT`.
 
 ### Required inputs checklist (must be complete before generating anything)
@@ -96,7 +98,7 @@ The following are required:
 - `fantasyPercent` (integer 0–100)
 - Plus mode-specific requirements:
     - Provided mode: `answerTypes` with `id`, `translations.en.name`, `translations.de.name` for each entry.
-    - Invented mode: either `answerTypeCount` (integer ≥ 2) OR a clear instruction like “invent N archetypes”.
+    - Invented mode: `answerTypeCount` (integer ≥ 2). `inventedHint` optional.
     - Derived mode: `answerTypeDerivationRule` (non-empty string); `answerTypeScopeHint` optional.
 
 If any required input is missing/invalid, you must respond with **only** the following block and nothing else:
