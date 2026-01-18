@@ -95,7 +95,7 @@ Return **exactly** one JSON object with this shape:
     "answerTypes": [
         {
             "id": "at_example",
-            "description": "5-10 sentences, English only (internal AI guidance)",
+            "description": "Exactly 20 sentences, English only (internal AI guidance)",
             "translations": {
                 "en": { "name": "Example" },
                 "de": { "name": "Beispiel" }
@@ -180,8 +180,9 @@ These rules exist to keep IDs stable and comparable across many generated JSON f
 
 - Each answer type represents a **persona/role/archetype** (e.g., “paladin”, “cunning rogue”, “strict town guard”, “healer”).
 - `description`:
-    - 5–10 sentences.
-    - Balanced: include strengths and weaknesses (good and bad aspects).
+    - Exactly **20 sentences**.
+    - Balanced: include strengths and weaknesses.
+    - Must explicitly include **morally questionable / ethically grey traits** (e.g., bias, selfishness, opportunism, manipulation, ends-justify-means thinking) alongside prosocial traits.
     - Must be written in **neutral, informational tone** (not roleplay speech).
     - Do **not** quote or copy official text verbatim from any source.
     - Avoid real-person defamation; keep it generic.
@@ -208,8 +209,19 @@ These rules exist to keep IDs stable and comparable across many generated JSON f
 
 - Each answer must be **exactly one sentence**.
 - Each answer must be clear and concrete (a distinct action/decision).
-- Each answer must fit the linked answer type persona.
-- For a given question, answers should be meaningfully different (not rephrases).
+- Length requirement:
+    - Answers must be **as short as possible**.
+    - Target: **≤ 10 words** per answer (space-separated).
+    - Only exceed 10 words if the sentence would become unclear or ungrammatical.
+- Distinctness requirements (within and across questions):
+    - For a given question, answers must be meaningfully different (not rephrases) and must not share the same core verb/action.
+    - Across the entire dataset, avoid repeating “template phrases” or reusable openings.
+    - Do not reuse the same starting 2–4 word sequence in different answers (e.g., avoid repeating patterns like “I steady everyone …” across questions).
+- Persona mapping must be **hard to guess** (while still obeying the index mapping rule):
+    - Each answer must still be plausible for its `answerTypeIds[i]`, but avoid obvious class/race/job tell-words.
+    - Do **not** name the archetype/class/race/profession (no “as a paladin…”, “my spells…”, “as a doctor…”).
+    - Prefer subtle preferences (risk tolerance, social style, planning horizon, ethics) over signature abilities/gear.
+    - Make each answer also reasonably plausible for at least one other answer type, so the true mapping is not trivial.
 - Voice requirement: answers must be written **in-character, first person** (start with “I …” / “Ich …”).
 
 ---
@@ -228,8 +240,15 @@ These rules exist to keep IDs stable and comparable across many generated JSON f
     - Create `{{ANSWERS_PER_QUESTION}}` answers and set `answerTypeIds` so that:
         - `answerTypeIds[i]` corresponds to `translations.en.answers[i]` and `translations.de.answers[i]`.
         - Each answer is first-person and in-character.
+        - Enforce the answer rules from section 4.3 (shortness, non-repetition across questions, and harder-to-guess persona mapping).
 
-4) Output only the final JSON.
+4) Do a final validation pass before output:
+    - Verify word count targets are met (only exceed when necessary).
+    - Verify no repeated 2–4 word openings across the dataset.
+    - Verify no repeated 2–4 word endings across the dataset.
+    - Verify answers are distinct and not generic boilerplate.
+
+5) Output only the final JSON.
 
 ---
 
